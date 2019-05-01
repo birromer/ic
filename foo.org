@@ -1,0 +1,3 @@
+#+begin_src shell :session foo :results output :exports both
+ls -la # or dir under windows
+#+end_src
