@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #+STARTUP: overview indent inlineimages logdrawer
 #+TITLE:       Journal
-#+AUTHOR:      Put your name here
+#+AUTHOR:      Bernardo Hummes
 #+LANGUAGE:    en
 #+TAGS: LIG(L) HOME(H) Europe(E) Blog(B) noexport(n) Stats(S)
 #+TAGS: Epistemology(E) Vulgarization(V) Teaching(T) R(R) OrgMode(O) Python(P)
