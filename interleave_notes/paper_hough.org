@@ -49,8 +49,30 @@
   -  interval approach consistente with infinite number of probability
     distribuitions
   - if [x1] = [-\infty, 5], [x2] = [-\infty, 4] and [x3] = [6, \infty], and x3 = x1 +
-    x2:
+    x2, the following contractions can be made:
     - x3 = x1 + x2 \Rightarrow z \in [6,\infty]  \cap ([-\infty,5] + [-\infty,4]) = [6,\infty]  \cap [-\infty, 9] = [6,9]
     - x1 = x3 - x2 \Rightarrow x \in [-\infty,5] \cap ([6,\infty]  - [-\infty,4]) = [-\infty,5] \cap [2,\infty] = [2,5]
     - x2 = x3 - x1 \Rightarrow y \in [-\infty,4] \cap ([6,\infty]  - [-\infty,5]) = [-\infty,4] \cap [1,\infty] = [1,4]
-  - i 
+  - the contractions are peformed until no more change can be observed
+  - 
+* Notes for page 4
+  :PROPERTIES:
+  :interleave_page_note: 4
+  :END:
+  - interval propagation method converges to a box wich contains all
+    solution vectors of the set of constraints
+  - empy set \rightarrow no solution
+  - result is the same for any order of contractions but it's
+    execution time is sensitive to it
+  - /forward-backward propagation/ is an efficient method
+  - 4
+  - the q-relaxed intersection of m boxes is not necessarily a box
+  - q-relaxed feasible set P^{{q}}
+    - for each /i/ it is first enclosed the sets *[p]* \cap Pi by boxes
+   [p](i)
+    - it is computed the q-relaxed intersection of those boxes and then
+    a box encolsure for it
+    - now it is on the same situation as it started, still enclosing
+     P^{{q}} but with a smaller box
+    - the process is repeated until the solution is stable
+  - 
