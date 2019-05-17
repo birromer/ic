@@ -97,3 +97,13 @@ shortcuts. This can be changed from the Options menu.
     give a try to =<r=, =<R=, =<RR=, =<g=, =<p=, =<P=, =<m= ...
   - Some of these templates are not specific to babel: e.g., =<h=, =<l=,
     =<L=, =<c=, =<e=, ...
+* 2019
+** 2019-05 May
+*** 2019-05-11 Saturday
+**** testando o uso de do journal a partir de um paper que estou lendo
+Entered on [2019-05-11 Sat 12:11]
+  
+  [[docview:/home/birromer/Documents/papers/Cadena%20et%20al.%20-%202016%20-%20Past,%20present,%20and%20future%20of%20simultaneous%20localization%20and%20mapping%20Toward%20the%20robust-perception%20age.pdf::1][/home/birromer/Documents/papers/Cadena et al. - 2016 - Past, present, and future of simultaneous localization and mapping Toward the robust-perception age.pdf]]
+*** 2019-05-12 Sunday
+****teste 
+Entered on [2019-05-12 Sun 00:00]

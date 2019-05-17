@@ -1,0 +1,49 @@
+#+INTERLEAVE_PDF: /home/birromer/papers/pdfs/paper_hough.pdf
+* Notes for page 1
+  :PROPERTIES:
+  :interleave_page_note: 1
+  :END:
+  - 1
+  - for extraction of shapes like ellipses, circles or lines
+  - detect a given geometrical shape and return the parameters of it
+    - e.g. two coordinates of the center and the radius for a circle
+  - first steps: preprocessing and edge detection
+  - principle: compute the modulus of the gradient of the image && to
+    treshold the resulting gradient image
+  - 2
+  - problem of parameter estimation can be cast into the problem of
+    characterizing a set with all parameter vectors that are
+    consistent with the ith measurement vector.
+  - p = parameter vector, [y](i) = ith measurement box
+  - problem considered to be implicit for the use of implicit equation
+    f(p,y) = 0
+  - considering that y can be isolated so that g(p) = y -> the problem
+    becomes a set inversion problem
+  - example: find parameter vector p = (p1,p1)^T such that
+    20*exp(-p1^t)-8*exp(-p2^t) goes trough all boxes in fig4 -> model
+    function is f(p,y) = 20*exp(-p1*y1)-8*exp(-p2*y1) - y2
+  - shape function = f : {\real^nf X \real^2 -> \real^nf
+                          (p,y)   -> f(p,y)
+  - the shape associated to *p* is defined as: S(*p*) = {y \in \real^2, f(p,y) =
+    0}
+  - considering the set of (small) boxes in the image Y  =
+    {[y](1),...,[y](m)}, each of this box is assumed to intersect the
+    edge of the shape which extraction is wanted
+    - e.g. in a buoy Y corresponds to a small boxes with cented the
+      edge points and with width of 2 pixels
+    - as the circle is the objective, the shape fcuntion is: f(p,y) =
+      (y1 - p1)^2 + (y2 - p2)^2 - p3^2 and the parameter vector is *p* =
+      (p1, p2, p3)^T with p1 and p2 being the coordinates of the circle
+      and p3 its radius.
+  - the feasible set P is the set of all *p* such that the
+      corresponding shape crosses all boxes [y](i)
+  - in a normal situation many boxes do not correspond to the shape
+    and should be considered as outliers and that has to be fixed for
+    a non-empy set
+  - 3
+  -  
+* Notes for page 3
+  ::PROPERTIES:
+  :interleave_page_note: 3
+  :END:
+  - 
