@@ -50,7 +50,7 @@
     distribuitions
   - if [x1] = [-\infty, 5], [x2] = [-\infty, 4] and [x3] = [6, \infty], and x3 = x1 +
     x2:
-    x3 = x1 + x2 \Rightarrow z \in [6,\infty]  \cap ([-\infty,5] + [-\infty,4]) = [6,\infty]  \cap [-\infty, 9] = [6,9]
-    x1 = x3 - x2 \Rightarrow x \in [-\infty,5] \cap ([6,\infty]  - [-\infty,4]) = [-\infty,5] \cap [2,\infty] = [2,5]
-    x2 = x3 - x1 \Rightarrow y \in [-\infty,4] \cap ([6,\infty]  - [-\infty,5]) = [-\infty,4] \cap [1,\infty] = [1,4]
-  -  
+    - x3 = x1 + x2 \Rightarrow z \in [6,\infty]  \cap ([-\infty,5] + [-\infty,4]) = [6,\infty]  \cap [-\infty, 9] = [6,9]
+    - x1 = x3 - x2 \Rightarrow x \in [-\infty,5] \cap ([6,\infty]  - [-\infty,4]) = [-\infty,5] \cap [2,\infty] = [2,5]
+    - x2 = x3 - x1 \Rightarrow y \in [-\infty,4] \cap ([6,\infty]  - [-\infty,5]) = [-\infty,4] \cap [1,\infty] = [1,4]
+  - i 
