@@ -1,0 +1,17 @@
+* Notes for Introduction to Affine Arithmetics
+  :PROPERTIES:
+  :INTERLEAVE_PDF: ../Documents/papers/pdfs/Stolfi, De Figueiredo - 2011 - An Introduction to Affine Arithmetic.pdf
+  :END:
+  - method alternative to interval analysis
+  - higher computational cost but better results, getting a smaller
+    resulting set
+
+* Notes for Polar Affine Arithmetics
+  :PROPERTIES:
+  :INTERLEAVE_PDF: ../Documents/papers/pdfs/Wang, Wang - 2019 - Polar Affine Arithmetic Optimal Affine Approximation and Operation Development for Computation in Polar Form Under.pdf
+  :END:
+  - other non probabilistic method
+  - uses polar coordinates instead of cartesian
+
+
+*Notesfor

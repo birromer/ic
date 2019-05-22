@@ -1,0 +1,4 @@
+* Tasks
+** TODO 
+   aprender uso de intervalos na representacao de objetos em imagens
+   [[file:~/org/ideias.org::*slam%20intervalar][slam intervalar]]

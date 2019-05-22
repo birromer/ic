@@ -9,6 +9,7 @@
   - first steps: preprocessing and edge detection
   - principle: compute the modulus of the gradient of the image && to
     treshold the resulting gradient image
+
 * Notes for page 2
   :PROPERTIES:
   :interleave_page_note: 2
@@ -75,4 +76,14 @@
     - now it is on the same situation as it started, still enclosing
      P^{{q}} but with a smaller box
     - the process is repeated until the solution is stable
-  - 
+  - another view to compute the box for the q-relaxed intersection
+    - for each set inside the *[p]* box, it is computed the smallest box
+      containing each [p](i)
+    - it is computed a box containing the q-relaxed intersection of
+      the [p](i)'s 
+    - that resulting box is bisected into two smaller boxes and the
+      process is repeated
+* Notes for page 6
+  :PROPERTIES:
+  :interleave_page_note: 6
+  :END:
