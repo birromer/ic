@@ -1,0 +1,154 @@
+** Image shape extraction using interval methods
+ :PROPERTIES:
+  :Custom_ID: Jaulin_imageshape
+  :AUTHOR: Jaulin \& Bazeille
+  :JOURNAL: 
+  :YEAR: 
+  :VOLUME: 
+  :PAGES: 
+  :DOI: 
+  :URL: 
+ :END:
+  - for extraction of shapes like ellipses, circles or lines
+  - detect a given geometrical shape and return the parameters of it
+    - e.g. two coordinates of the center and the radius for a circle
+  - first steps: preprocessing and edge detection
+  - principle: compute the modulus of the gradient of the image && to
+    treshold the resulting gradient image
+  -
+  - problem of parameter estimation can be cast into the problem of
+    characterizing a set with all parameter vectors that are
+    consistent with the ith measurement vector.
+  - p = parameter vector, [y](i) = ith measurement box
+  - problem considered to be implicit for the use of implicit equation
+    f(p,y) = 0
+  - considering that y can be isolated so that g(p) = y -> the problem
+    becomes a set inversion problem
+  - example: find parameter vector p = (p1,p1)^T such that
+    20*exp(-p1^t)-8*exp(-p2^t) goes trough all boxes in fig4 -> model
+    function is f(p,y) = 20*exp(-p1*y1)-8*exp(-p2*y1) - y2
+  - shape function = f : {\real^nf X \real^2 -> \real^nf
+                          (p,y)   -> f(p,y)
+  - the shape associated to *p* is defined as: S(*p*) = {y \in \real^2, f(p,y) =
+    0}
+  - considering the set of (small) boxes in the image Y  =
+    {[y](1),...,[y](m)}, each of this box is assumed to intersect the
+    edge of the shape which extraction is wanted
+    - e.g. in a buoy Y corresponds to a small boxes with cented the
+      edge points and with width of 2 pixels
+    - as the circle is the objective, the shape fcuntion is: f(p,y) =
+      (y1 - p1)^2 + (y2 - p2)^2 - p3^2 and the parameter vector is *p* =
+      (p1, p2, p3)^T with p1 and p2 being the coordinates of the circle
+      and p3 its radius.
+  - the feasible set P is the set of all *p* such that the
+      corresponding shape crosses all boxes [y](i)
+  - in a normal situation many boxes do not correspond to the shape
+    and should be considered as outliers and that has to be fixed for
+    a non-empy set
+  -
+  -  interval approach consistente with infinite number of probability
+    distribuitions
+  - if [x1] = [-\infty, 5], [x2] = [-\infty, 4] and [x3] = [6, \infty], and x3 = x1 +
+    x2, the following contractions can be made:
+    - x3 = x1 + x2 \Rightarrow z \in [6,\infty]  \cap ([-\infty,5] + [-\infty,4]) = [6,\infty]  \cap [-\infty, 9] = [6,9]
+    - x1 = x3 - x2 \Rightarrow x \in [-\infty,5] \cap ([6,\infty]  - [-\infty,4]) = [-\infty,5] \cap [2,\infty] = [2,5]
+    - x2 = x3 - x1 \Rightarrow y \in [-\infty,4] \cap ([6,\infty]  - [-\infty,5]) = [-\infty,4] \cap [1,\infty] = [1,4]
+  - the contractions are peformed until no more change can be observed
+  - 
+  - interval propagation method converges to a box wich contains all
+    solution vectors of the set of constraints
+  - empy set \rightarrow no solution
+  - result is the same for any order of contractions but it's
+    execution time is sensitive to it
+  - /forward-backward propagation/ is an efficient method
+  - 4
+  - the q-relaxed intersection of m boxes is not necessarily a box
+  - q-relaxed feasible set P^{{q}}
+    - for each /i/ it is first enclosed the sets *[p]* \cap Pi by boxes
+   [p](i)
+    - it is computed the q-relaxed intersection of those boxes and then
+    a box encolsure for it
+    - now it is on the same situation as it started, still enclosing
+     P^{{q}} but with a smaller box
+    - the process is repeated until the solution is stable
+  - another view to compute the box for the q-relaxed intersection
+    - for each set inside the *[p]* box, it is computed the smallest box
+      containing each [p](i)
+    - it is computed a box containing the q-relaxed intersection of
+      the [p](i)'s 
+    - that resulting box is bisected into two smaller boxes and the
+      process is repeated
+
+cite:Jaulin_imageshape
+
+
+** Introduction to Affine Arithmetics
+  :PROPERTIES:
+  :INTERLEAVE_PDF: ../Documents/papers/pdfs/Stolfi, De Figueiredo - 2011 - An Introduction to Affine Arithmetic.pdf
+  :END:
+  - method alternative to interval analysis
+  - higher computational cost but better results, getting a smaller
+    resulting set
+
+    
+** Polar Affine Arithmetics
+  :PROPERTIES:
+  :INTERLEAVE_PDF: pdfs/
+  :END:
+  - other non probabilistic method
+  - uses polar coordinates instead of cartesian
+
+
+** Graph-Based SLAM
+  :PROPERTIES:
+  :interleave_page_note: 1
+  :END:
+  - base for implementation of graph slams
+
+
+** 2010 - A Tutorial on Graph-Based Slam
+ :PROPERTIES:
+  :Custom_ID: grisetti10_tutor_graph_based_slam
+  :AUTHOR: G Grisetti, R Kummerle, C Stachniss \& W Burgard
+  :JOURNAL: IEEE Intelligent Transportation Systems Magazine
+  :YEAR: 2010
+  :VOLUME: 2
+  :PAGES: 31-43
+  :DOI: 10.1109/mits.2010.939925
+  :URL: https://doi.org/10.1109/mits.2010.939925
+ :END:
+
+cite:grisetti10_tutor_graph_based_slam
+  - 
+
+
+** TODO 2013 - Decentralized Controllers for Perimeter Surveillance With Teams of Aerial Robots
+ :PROPERTIES:
+  :Custom_ID: pimenta13_decen_contr_perim_surveil_with
+  :AUTHOR: Luciano Pimenta, Guilherme Pereira, Mateus Gon\ccalves, Nathan Michael, Matthew Turpin \& Vijay Kumar
+  :JOURNAL: Advanced Robotics
+  :YEAR: 2013
+  :VOLUME: 27
+  :PAGES: 697-709
+  :DOI: 10.1080/01691864.2013.778942
+  :URL: https://doi.org/10.1080/01691864.2013.778942
+ :END:
+
+cite:pimenta13_decen_contr_perim_surveil_with
+
+
+** TODO 2013 - Swarm Coordination Based on Smoothed Particle Hydrodynamics Technique
+ :PROPERTIES:
+  :Custom_ID: pimenta13_swarm_coord_based_smoot_partic_hydrod_techn
+  :AUTHOR: Luciano Pimenta, Guilherme Pereira, Nathan Michael, Renato Mesquita, Mateus Bosque, Luiz Chaimowicz \& Vijay Kumar
+  :JOURNAL: IEEE Transactions on Robotics
+  :YEAR: 2013
+  :VOLUME: 29
+  :PAGES: 383-399
+  :DOI: 10.1109/tro.2012.2234294
+  :URL: https://doi.org/10.1109/tro.2012.2234294
+ :END:
+
+cite:pimenta13_swarm_coord_based_smoot_partic_hydrod_techn
+
+

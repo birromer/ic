@@ -1,0 +1,50 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Mantelli et~al.(2019)Mantelli, Pittol, Neuland, Ribacki, Maffei,
+  Jorge, Prestes, and Kolberg]{mantelli19_novel_measur_model_based_abbrief}
+Mathias Mantelli, Diego Pittol, Renata Neuland, Arthur Ribacki, Renan Maffei,
+  Vitor Jorge, Edson Prestes, and Mariana Kolberg.
+\newblock A novel measurement model based on abbrief for global localization of
+  a uav over satellite images.
+\newblock \emph{Robotics and Autonomous Systems}, 112\penalty0 (nil):\penalty0
+  304--319, 2019.
+\newblock \doi{10.1016/j.robot.2018.12.006}.
+\newblock URL \url{https://doi.org/10.1016/j.robot.2018.12.006}.
+
+\bibitem[Aubry et~al.()Aubry, Desmare, and
+  Jaulin]{aubry13_loop_detec_mobil_robot_using_inter_analy}
+Cl{\'e}ment Aubry, Rozenn Desmare, and Luc Jaulin.
+\newblock Loop detection of mobile robots using interval analysis.
+\newblock \emph{Automatica}.
+
+\bibitem[Deutsch and Jozsa(1992)]{deutsch92_rapid_solut_probl_by_quant_comput}
+D.~Deutsch and R.~Jozsa.
+\newblock Rapid solution of problems by quantum computation.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 439\penalty0 (1907):\penalty0 553--558, 1992.
+\newblock \doi{10.1098/rspa.1992.0167}.
+\newblock URL \url{https://doi.org/10.1098/rspa.1992.0167}.
+
+\bibitem[Grisetti et~al.()Grisetti, Kummerle, Stachniss, and
+  Burgard]{grisetti10_tutor_graph_based_slam}
+G~Grisetti, R~Kummerle, C~Stachniss, and W~Burgard.
+\newblock A tutorial on graph-based slam.
+\newblock \emph{IEEE Intelligent Transportation Systems Magazine}, 2\penalty0
+  (4).
+
+\bibitem[Pimenta et~al.(2013)Pimenta, Pereira, Gon{\c{c}}alves, Michael,
+  Turpin, and Kumar]{pimenta13_decen_contr_perim_surveil_with}
+Luciano~C.A. Pimenta, Guilherme~A.S. Pereira, Mateus~M. Gon{\c{c}}alves, Nathan
+  Michael, Matthew Turpin, and Vijay Kumar.
+\newblock Decentralized controllers for perimeter surveillance with teams of
+  aerial robots.
+\newblock \emph{Advanced Robotics}, 27\penalty0 (9):\penalty0 697--709, 2013.
+\newblock \doi{10.1080/01691864.2013.778942}.
+\newblock URL \url{https://doi.org/10.1080/01691864.2013.778942}.
+
+\end{thebibliography}

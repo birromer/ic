@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: references.aux
+The style file: unsrtnat.bst
+Database file #1: references.bib
+I was expecting an "="---line 22 of file references.bib
+ :   v 
+ :     olume =  49,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 52 of file references.bib
+ :                   manipulation 
+ :                                Via Caging},
+I'm skipping whatever remains of this entry
+Warning--empty year in aubry13_loop_detec_mobil_robot_using_inter_analy
+Warning--empty year in aubry13_loop_detec_mobil_robot_using_inter_analy
+Warning--empty year in grisetti10_tutor_graph_based_slam
+Warning--empty year in grisetti10_tutor_graph_based_slam
+You've used 5 entries,
+            2481 wiz_defined-function locations,
+            588 strings with 5784 characters,
+and the built_in function-call counts, 2193 in all, are:
+= -- 165
+> -- 153
+< -- 1
++ -- 56
+- -- 46
+* -- 208
+:= -- 378
+add.period$ -- 21
+call.type$ -- 5
+change.case$ -- 10
+chr.to.int$ -- 5
+cite$ -- 9
+duplicate$ -- 93
+empty$ -- 172
+format.name$ -- 53
+if$ -- 443
+int.to.chr$ -- 1
+int.to.str$ -- 6
+missing$ -- 5
+newline$ -- 39
+num.names$ -- 15
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 5
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 73
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 35
+warning$ -- 4
+while$ -- 13
+width$ -- 0
+write$ -- 81
+(There were 2 error messages)
