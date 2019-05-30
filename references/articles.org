@@ -99,14 +99,7 @@ cite:Jaulin_imageshape
   - uses polar coordinates instead of cartesian
 
 
-** Graph-Based SLAM
-  :PROPERTIES:
-  :interleave_page_note: 1
-  :END:
-  - base for implementation of graph slams
-
-
-** 2010 - A Tutorial on Graph-Based Slam
+** A Tutorial on Graph-Based Slam
  :PROPERTIES:
   :Custom_ID: grisetti10_tutor_graph_based_slam
   :AUTHOR: G Grisetti, R Kummerle, C Stachniss \& W Burgard
@@ -119,10 +112,45 @@ cite:Jaulin_imageshape
  :END:
 
 cite:grisetti10_tutor_graph_based_slam
-  - 
+  * introduction
+    - slam -> to locate the robot within the known map, incorporating
+    new measurements as they are made
+    - popular techniques: kalman filter, particle filter, information
+    filter
+    - on-line SLAM -> becasuse of the incremental nature of filter
+    - solving the graph slam problem:
+      - contruct a graph whose nodes represent robot poses or landmarks
+      - edge between two nodes encodes a sensor measurement that
+      contrains the connected poses
+      - constrains can be contraditory because of noise
+      - once the graph is constructed, it is important to find the
+      configuration of nodes that best represent the map and is
+      consistent with the measurement -> large error minimization problem
+  * probabilistic foundations 
+    - robot assumed to move in an unkown enviroment along a trajectory
+    described byu the sequence of random variables x_1:_t, sequence of
+    odometry measurements u_1:_t and perceptions of the enviroment z_1:_t
+    - solving full slam: p(x_1:_t, m | z_1:_t, u_1:_t, x_0)
+    - x_0 is the initial pose
+    - choise of map representation depends on the sensors used, on the
+    characteristics of the enviroment and on the estimation
+    algorithm, e.g.
+      - landmark maps: prefered in enviroments with locally
+      distinguisable features are identified and cameras are used
+      - dense representations: used in conjunction with range sensors
+    - map is defined by the measurements and the locations where these
+    measurements have been aquired
+    - slam is tractable even operating in high dimensional state spaces
+    because of the static world assumption and markov assumption
+    - structure often described with the dynamic bayesian network
+      (DBN)
+      - directed graph
+      - one node for each random variable in the process
+      - a directed edge bwtween two nodes models a conditional
+        dependence between them
+    -  
 
-
-** TODO 2013 - Decentralized Controllers for Perimeter Surveillance With Teams of Aerial Robots
+** TODO Decentralized Controllers for Perimeter Surveillance With Teams of Aerial Robots
  :PROPERTIES:
   :Custom_ID: pimenta13_decen_contr_perim_surveil_with
   :AUTHOR: Luciano Pimenta, Guilherme Pereira, Mateus Gon\ccalves, Nathan Michael, Matthew Turpin \& Vijay Kumar
@@ -137,7 +165,7 @@ cite:grisetti10_tutor_graph_based_slam
 cite:pimenta13_decen_contr_perim_surveil_with
 
 
-** TODO 2013 - Swarm Coordination Based on Smoothed Particle Hydrodynamics Technique
+** TODO Swarm Coordination Based on Smoothed Particle Hydrodynamics Technique
  :PROPERTIES:
   :Custom_ID: pimenta13_swarm_coord_based_smoot_partic_hydrod_techn
   :AUTHOR: Luciano Pimenta, Guilherme Pereira, Nathan Michael, Renato Mesquita, Mateus Bosque, Luiz Chaimowicz \& Vijay Kumar
@@ -152,3 +180,26 @@ cite:pimenta13_decen_contr_perim_surveil_with
 cite:pimenta13_swarm_coord_based_smoot_partic_hydrod_techn
 
 
+
+** TODO Robust set-membership state estimation
+ :PROPERTIES:
+  :Custom_ID: Jaulin2007
+  :AUTHOR: Jaulin
+  :JOURNAL: 
+  :YEAR: 2007
+  :VOLUME: 
+  :PAGES: 1--24
+  :DOI: 
+  :URL: 
+ :END:
+
+cite:Jaulin2007
+
+
+** An introduction to affine arithmetic
+
+  :PROPERTIES:
+  :Custom_ID: Stolfi2011
+  :END:
+  - alternative to interval analysis
+  - greater computational cost but finer results
