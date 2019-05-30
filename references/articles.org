@@ -148,7 +148,23 @@ cite:grisetti10_tutor_graph_based_slam
       - one node for each random variable in the process
       - a directed edge bwtween two nodes models a conditional
         dependence between them
-    -  
+      - p(x_t | x_t-_1, u_t): prob of robot being in *x* at time *t* given that
+      it was in x_t at time t-1 and aquired odometry measure u_t
+      - p(z_t | x_t, m_t): prob of peforming the observation z_t given that
+      the robot is at location x_t 
+      - its usage highlights the temporal structure
+   - an alternative to the DBN is the graph-based/network-based
+     formulation
+      - highlights the underlying spatial structure
+      - nodes are poses of the robot
+      - spatial constraints (resulted from observations z_t or odometry
+        measurements u_t) are encoded in the edges between two nodes
+      - a constraint consists in a probability distribuition over the
+        relative transformations between the two poses  (odometry
+        measurements or relative transoformations between them)
+      - once the graph is constructed the aim is to find the
+        configuration that best satisfies the constraints
+  
 
 ** TODO Decentralized Controllers for Perimeter Surveillance With Teams of Aerial Robots
  :PROPERTIES:
